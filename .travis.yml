@@ -3,11 +3,12 @@ node_js:
   - 10
 services:
   - xvfb
+addons:
+      chrome: stable
 before_script:
-  - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
 install:
   - npm install -g karma-cli
   - npm install
 script:
-  - npm run test
+  - npm run start
