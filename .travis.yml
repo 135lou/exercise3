@@ -1,5 +1,6 @@
 language: node_js
 before_script:
   - npm install -g karma-cli
+  - npm install
 script:
   - npm run test
