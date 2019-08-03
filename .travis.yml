@@ -1,3 +1,11 @@
 language: node_js
-before_script: npm install
-script: npm run test
+node_js:
+  - "6"
+addons:
+  chrome: stable
+services:
+  - xvfb
+before_install:
+  npm install karma-cli -g
+script:
+  - npm run start
